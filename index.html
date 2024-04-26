@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+    <script src="movie.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="row nav__row">
+        <div class="logo">
+          <figure>
+            <img class="logo" id="logo" src="./assets/logo_size.png" alt="" />
+          </figure>
+        </div>
+        <div class="nav__link--list">
+          <ul class="nav__list">
+            <li class="nav__link">
+              <a class="nav__link--anchor" href="#">Home</a>
+            </li>
+            <li class="nav__link">
+              <a class="nav__link--anchor" href="#" target="_blank">About</a>
+            </li>
+            <button class="nav__link nav__link--btn">
+              <a class="nav__link--anchor nav__link--anchor-btn" href="./movies.html"
+                >Contact</a
+              >
+            </button>
+          </ul>
+        </div>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">Home</a></li>
+            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">About</a></li>
+            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="landing">
+      <div class="row">
+        <div class="heading">
+          <h1 class="title">America's Most Awarded Search Engine For Movies.</h1>
+        </div>
+        <div class="sub-heading">
+          <h3 class="sub">
+            Find the <span class="blue">perfect movie</span> for you here!
+          </h3>
+        </div>
+        <div class="search">
+          <input
+            class="search__input"
+            type="text"
+            placeholder="Search by Title"
+            onchange="searchChange(event)"
+          ><a class="movies__anchor" href="./movies.html"></a></input>
+          <button id="search__btn" class="search__btn" onchange="searchChange(event)"><a class="movies__anchor" href="./movies.html">Go!</a></button>
+        </div>
+        <div class="landing__img">
+          <img
+            class="movie__img"
+            src="./assets/undraw_home_cinema_l7yl (1).svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__links">
+        <ul class="footer__links--list">
+          <li class="footer__link"><a class="footer__link--anchor" href="#">Home</a></li>
+          <li class="footer__link"><a class="footer__link--anchor" href="#" target="_blank">About</a></li>
+          <li class="footer__link"><a class="footer__link--anchor" href="#" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+      <hr class="footer__break" />
+      <div class="rights">
+        <div class="footer__logo">
+          <img
+            class="footer__img"
+            src="./assets/LogoSample_ByTailorBrands.png"
+            alt=""
+          />
+        </div>
+        <div class="footer__rights">
+          <h3 class="footer__copy">
+            © 2024 MovieFinder Inc. All Rights Reserved.
+          </h3>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

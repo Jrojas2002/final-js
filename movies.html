@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <script src="movie.js" defer></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="row nav__row">
+          <div class="logo">
+            <figure>
+              <img class="logo" id="logo" src="./assets/logo_size.png" alt="" />
+            </figure>
+          </div>
+          <div class="nav__link--list">
+            <ul class="nav__list">
+              <li class="nav__link">
+                <a class="nav__link--anchor" href="./index.html">Home</a>
+              </li>
+              <li class="nav__link">
+                <a class="nav__link--anchor" href="#" target="_blank">About</a>
+              </li>
+              <button class="nav__link nav__link--btn">
+                <a class="nav__link--anchor nav__link--anchor-btn" href="./index.html"
+                  >Search</a
+                >
+              </button>
+            </ul>
+          </div>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list"><a class="menu__link" href="./index.html" onclick="closeMenu()">Home</a></li>
+              <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">About</a></li>
+              <li class="menu__list"><a class="menu__link" href="./index.html" onclick="closeMenu()">Search</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="movie__header">
+        <div class="row">
+            <div class="search__header">
+            <h2 id="results" class="results">
+                <span class="blue">Results</span>
+            </h2>
+            <select id="filter" class="Sort" onchange="filterChange(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="OLD_TO_NEW">Oldest to Newest</option>
+                <option value="NEW_TO_OLD">Newest to Oldest</option>
+              </select>
+            </div>
+        <div class="movies">
+            <i class="fas fa-spinner loading"></i>
+            <!-- <div class="movie">
+                <figure class="movie__img--wrapper">
+                    <img class="movies__img" src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" alt="">
+                </figure>
+                <div class="movie__title">
+                    <b class="blue">Title:</b> Guardians of the Galaxy Vol. 2
+                </div>
+                <div class="movie__rating">
+                    <b class="blue">imdbID:</b> tt3896198
+                </div>
+                <div class="movie__year">
+                    <b class="blue">Released Year:</b> 2017
+                </div>
+                </div>     -->
+        </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer__links">
+          <ul class="footer__links--list">
+            <li class="footer__link"><a class="footer__link--anchor" href="./index.html">Home</a></li>
+            <li class="footer__link"><a class="footer__link--anchor" href="#" target="_blank">About</a></li>
+            <li class="footer__link"><a class="footer__link--anchor" href="#" target="_blank">Contact</a></li>
+          </ul>
+        </div>
+        <hr class="footer__break" />
+        <div class="rights">
+          <div class="footer__logo">
+            <img
+              class="footer__img"
+              src="./assets/LogoSample_ByTailorBrands.png"
+              alt=""
+            />
+          </div>
+          <div class="footer__rights">
+            <h3 class="footer__copy">
+              © 2024 MovieFinder Inc. All Rights Reserved.
+            </h3>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
